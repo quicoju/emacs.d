@@ -1,8 +1,8 @@
 ;; Package manager settings
 (setq package-archives
       '(("gnu"       . "http://elpa.gnu.org/packages/")
-	("marmalade" . "http://marmalade-repo.org/packages/")
-	("melpa"     . "https://melpa.org/packages/")))
+        ("marmalade" . "http://marmalade-repo.org/packages/")
+        ("melpa"     . "https://melpa.org/packages/")))
 
 (package-initialize)
 (require 'use-package)
@@ -30,6 +30,7 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (display-battery-mode 1)
+(setq display-time-day-and-date t)
 (setq display-time-24hr-format t)
 (display-time-mode)
 (setq visible-bell t)
@@ -52,8 +53,12 @@
 (add-hook 'prog-mode-hook
 	  (lambda ()
 	    (progn (flyspell-prog-mode)
-		   (linum-mode)
-		   (column-number-mode))))
+               (setq-default indent-tabs-mode nil)
+               (setq-default tab-width 4)
+               (linum-mode)
+               (column-number-mode)
+               (hl-line-mode)
+               (column-enforce-mode))))
 
 ;; programming language mode setup
 (defalias 'perl-mode 'cperl-mode)
@@ -62,11 +67,12 @@
 (add-hook 'cperl-mode-hook
 	  (lambda ()
 	    (progn (flymake-mode)
-		   (local-set-key
-		    (kbd "C-c C-h ?") 'flymake-popup-current-error-menu)
-		   (custom-set-variables
-		    '(cperl-indent-parens-as-block t)
-		    '(cperl-electric-parens t)))))
+               (local-set-key
+                (kbd "C-c C-h ?") 'flymake-popup-current-error-menu)
+               (custom-set-variables
+                '(cperl-indent-parens-as-block t)
+                '(cperl-electric-parens t)
+                '(cperl-indent-level tab-width)))))
 
 ;;set default browser
 (setq browse-url-browser-function 'browse-url-firefox)
@@ -83,6 +89,7 @@
 ;; Some additional helpers
 ;; =======================
 (load "gtd.el")
+(load "programming.el")
 
 ;; Automatic stuff
 ;; ===============
