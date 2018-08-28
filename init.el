@@ -83,6 +83,7 @@
 ;; Some additional helpers
 ;; =======================
 (load "gtd.el")
+(load "publish.el")
 
 ;; Automatic stuff
 ;; ===============
