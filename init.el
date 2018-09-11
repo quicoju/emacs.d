@@ -9,7 +9,7 @@
 
 ;; Set preferred theme
 (setq custom-safe-themes t)
-(load-theme 'atom-dark)
+(load-theme 'atom-dark) ; 'spacemacs-dark or 'atom-dark
 (add-to-list 'default-frame-alist
              '(font . "DejaVu Sans Mono-8"))
 
@@ -66,6 +66,7 @@
 (load "gtd.el")
 (load "publish.el")
 (load "programming.el")
+(load "web.el")
 
 ;; Automatic stuff
 ;; ===============
@@ -74,9 +75,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(cperl-electric-parens t)
+ '(cperl-indent-level tab-width)
+ '(cperl-indent-parens-as-block t)
  '(package-selected-packages
    (quote
-    (magit tt-mode pde tea-time transpose-frame org-pomodoro winring use-package racket-mode pacmacs nodejs-repl multiple-cursors mingus evil cask auto-complete-auctex auctex-lua auctex-latexmk atom-dark-theme))))
+    (spacemacs-theme web-beautify column-enforce-mode magit
+    tt-mode pde tea-time transpose-frame org-pomodoro winring
+    use-package racket-mode pacmacs nodejs-repl multiple-cursors
+    mingus evil cask auto-complete-auctex auctex-lua
+    auctex-latexmk atom-dark-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

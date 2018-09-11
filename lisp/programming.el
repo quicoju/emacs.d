@@ -3,13 +3,6 @@
 
 ;; General
 ;; =======
-(defun find-tag-no-prompt ()
-  "Jump to the tag at point without prompting"
-  (interactive)
-  (find-tag (find-tag-default)))
-
-(global-set-key (kbd "M-.") 'find-tag-no-prompt)
-
 (add-hook 'prog-mode-hook
 	  (lambda ()
 	    (progn (flyspell-prog-mode)
