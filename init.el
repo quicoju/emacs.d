@@ -80,11 +80,7 @@
  '(cperl-indent-parens-as-block t)
  '(package-selected-packages
    (quote
-    (spacemacs-theme web-beautify column-enforce-mode magit
-    tt-mode pde tea-time transpose-frame org-pomodoro winring
-    use-package racket-mode pacmacs nodejs-repl multiple-cursors
-    mingus evil cask auto-complete-auctex auctex-lua
-    auctex-latexmk atom-dark-theme))))
+    (htmlize spacemacs-theme web-beautify column-enforce-mode magit tt-mode pde tea-time transpose-frame org-pomodoro winring use-package racket-mode pacmacs nodejs-repl multiple-cursors mingus evil cask auto-complete-auctex auctex-lua auctex-latexmk atom-dark-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

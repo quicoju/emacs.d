@@ -30,4 +30,4 @@
 	("posts-push"
 	 :components ("posts-notes-remote" "posts-static-remote"))))
 
-(load "posts.el")
+(load "posts_templates.el")
