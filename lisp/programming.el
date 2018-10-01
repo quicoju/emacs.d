@@ -26,6 +26,7 @@
                (custom-set-variables
                 '(cperl-indent-parens-as-block t)
                 '(cperl-electric-parens t)
+                '(cperl-continued-statement-offset tab-width)
                 '(cperl-indent-level tab-width)))))
 
 ;; Racket
