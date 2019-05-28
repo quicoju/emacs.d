@@ -14,7 +14,7 @@
          "#+OPTIONS: html-preamble:t html-scripts:t html-style:nil\n"
          "#+OPTIONS: html5-fancy:t tex:t\n\n"
          "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"css/my.css\"/>\n"
-         "#+HTML_HEAD: <script type=\"text/javascript\" src=\"js/my.js\"></script>"
+         "#+HTML_HEAD: <script type=\"text/javascript\" src=\"js/my.js\"></script>\n"
          "#+HTML_DOCTYPE: xhtml-strict\n"
          "#+HTML_CONTAINER: div\n"
          "#+HTML_LINK_HOME:\n"
@@ -26,4 +26,11 @@
          "<img src=\"./img/emacs.png\" style=\"width:42px;height:42px;border:0;\"></a>"
          "<a href=\"https://orgmode.org\">"
          "<img src=\"./img/org-mode.png\" style=\"width:42px;height:42px;border:0;\"</a>\n"
-         "#+LATEX_HEADER:\n")))
+         "#+LATEX_HEADER:\n\n"
+         "#+BEGIN_navigator"
+         "#+END_navigator"
+         "** Comments"
+         "#+BEGIN_EXPORT html"
+         "<div id=\"commento\"></div>"
+         "<script src=\"https://cdn.commento.io/js/commento.js\"></script>"
+         "#+END_EXPORT")))

@@ -6,7 +6,7 @@
 	 :publishing-directory ,(getenv "POSTS_TEST_DIR")
 	 :recursive  t
 	 :publishing-function org-html-publish-to-html
-	 :headline-levels 4 
+	 :headline-levels 4
 	 :auto-preamble  t)
 	("posts-static"
 	 :base-directory ,(getenv "POSTS_BASE_DIR")
