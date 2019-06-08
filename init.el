@@ -1,23 +1,23 @@
 ;; Package manager settings
 (setq package-archives
-      '(("gnu"       . "http://elpa.gnu.org/packages/")
-        ("marmalade" . "http://marmalade-repo.org/packages/")
-        ("melpa"     . "https://melpa.org/packages/")))
+      '(("gnu"   . "http://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")))
 
 (package-initialize)
-(require 'use-package)
 
 ;; Set preferred theme
-(setq custom-safe-themes t)
-(load-theme 'atom-dark) ; 'spacemacs-dark or 'atom-dark
 (add-to-list 'default-frame-alist
              '(font . "DejaVu Sans Mono-8"))
+(winum-mode)
+(setq custom-safe-themes t)
+(load-theme 'spacemacs-dark) ; 'atom-dark
+(spaceline-spacemacs-theme)
 
 ;; Set autosaves folder
-(setq temporary-file-directory 
-      (file-name-as-directory 
+(setq temporary-file-directory
+      (file-name-as-directory
        (concat (getenv "HOME") "/tmp/emacs_autosaves")))
-      
+
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 
@@ -31,7 +31,6 @@
 (scroll-bar-mode -1)
 (display-battery-mode 1)
 (setq display-time-day-and-date t)
-(setq display-time-24hr-format t)
 (display-time-mode)
 (setq visible-bell t)
 (desktop-save-mode 1)
