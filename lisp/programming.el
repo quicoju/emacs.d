@@ -45,11 +45,3 @@
 (add-hook 'racket-mode-hook
 	      (lambda ()
 	        (local-set-key (kbd "C-c C-b") 'racket-send-buffer)))
-
-;; Rust
-;; ====
-(add-hook 'rust-mode-hook
-          (lambda ()
-            (progn (flymake-mode 0)
-                   (flycheck-mode)
-                   (flycheck-rust-setup))))
