@@ -16,9 +16,15 @@
 (display-battery-mode 1)
 (blink-cursor-mode -1)
 
-(use-package doom-modeline
-  :ensure t
-  :hook (after-init . doom-modeline-model))
+(use-package doom-themes
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t)
+  (load-theme 'doom-one t))
+  
+(require 'doom-modeline)
+(doom-modeline-mode 1)
 
 (setq visible-bell t)
 
@@ -27,6 +33,8 @@
              '(font . "DejaVu Sans Mono-8"))
 
 ;; state environment
+(require 'winring)
+(winring-initialize)
 (desktop-save-mode 1)
 (server-start)
 
@@ -65,7 +73,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (doom-modeline rust-mode rust-playground helm use-package))))
+    (fill-column-indicator winring doom-themes doom-modeline rust-mode rust-playground helm use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

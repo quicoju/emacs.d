@@ -18,6 +18,8 @@
                (linum-mode)
                (column-number-mode)
                (hl-line-mode)
+               (setq-default fill-column 80)
+               (fci-mode)
                (column-enforce-mode))))
 ;; Perl
 ;; ====
