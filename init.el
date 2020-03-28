@@ -46,7 +46,8 @@
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 
-;; usage candy
+;; helm utilities
+;; ==============
 (require 'helm-config)
 (helm-mode 1)
 (define-key global-map [remap find-file] 'helm-find-files)
@@ -55,6 +56,7 @@
 (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
 (define-key global-map [remap execute-extended-command] 'helm-M-x)
 (define-key global-map [remap apropos-command] 'helm-apropos)
+(define-key global-map [remap yank-pop] 'helm-show-kill-ring)
 
 ;; Some additional helpers
 ;; =======================
