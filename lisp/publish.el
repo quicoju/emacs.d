@@ -1,5 +1,6 @@
-(require 'ox-publish)
-(setq org-publish-project-alist
+(use-package 'ox-publish
+  :ensure t
+  :config (setq org-publish-project-alist
       `(("posts-notes"
 	 :base-directory ,(getenv "POSTS_BASE_DIR")
 	 :base-extension "org"
@@ -28,6 +29,6 @@
 	("posts"
 	 :components ("posts-notes" "posts-static"))
 	("posts-push"
-	 :components ("posts-notes-remote" "posts-static-remote"))))
+	 :components ("posts-notes-remote" "posts-static-remote")))))
 
 (load "posts_templates.el")

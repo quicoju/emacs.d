@@ -83,10 +83,10 @@
 ;; extend load-path
 (add-to-list 'load-path
 	     (concat user-emacs-directory "lisp"))
-;(load "gtd.el")
-;(load "publish.el")
-;(load "programming.el")
-;(load "web.el")
+(load "gtd.el")
+(load "publish.el")
+(load "programming.el")
+(load "web.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

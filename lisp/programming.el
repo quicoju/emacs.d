@@ -1,49 +1,31 @@
 ;; 2018-08-21 -  Miscellaneous setting for programming
 ;;
-
-;; General
-;; =======
-(require 'use-package)
 (use-package flymake-diagnostic-at-point
   :after flymake
   :config
   (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode))
 
-(add-hook 'prog-mode-hook
-	  (lambda ()
-	    (progn (flyspell-prog-mode)
-               (flymake-mode)
-               (setq-default indent-tabs-mode nil)
-               (setq-default tab-width 4)
-               (linum-mode)
-               (column-number-mode)
-               (hl-line-mode)
-               (setq-default fill-column 80)
-               (fci-mode)
-               (column-enforce-mode))))
+(use-package prog-mode
+  :requires (flymake)
+  :init (setq-default indent-tabs-mode nil)
+        (setq-default tab-width 4)
+        (setq-default fill-column 80)
+        (linum-mode)
+        (flymake-mode)
+        (hl-line-mode)
+        (column-number-mode))
+
 ;; Perl
 ;; ====
-(defalias 'perl-mode 'cperl-mode)
-(add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
-(add-to-list 'auto-mode-alist '("\\.t\\'" . cperl-mode))
-(add-hook 'cperl-mode-hook
-	  (lambda ()
-	    (progn (custom-set-variables
-                '(cperl-indent-parens-as-block t)
-                '(cperl-electric-parens t)
-                '(cperl-continued-statement-offset tab-width)
-                '(cperl-indent-level tab-width)))))
-
-;; Racket
-;; ======
-(defun racket-send-buffer ()
-  (interactive)
-  (save-excursion
-    (goto-char (point-min))
-    (set-mark-command nil)
-    (goto-char (point-max))
-    (racket-send-region (region-beginning) (region-end))))
-
-(add-hook 'racket-mode-hook
-	      (lambda ()
-	        (local-set-key (kbd "C-c C-b") 'racket-send-buffer)))
+(use-package cperl-mode
+  :ensure t
+  :interpreter "perl"
+  :mode (("\\.t\\'"  . 'cperl-mode)
+         ("\\.pm\\'" . 'cperl-mode)
+         ("\\.pl\\'" . 'cperl-mode))
+  :bind (("C-c C-c" . 'compile))
+  :init (defalias 'perl-mode 'cperl-mode)
+        (setq cperl-indent-parens-as-block t)
+        (setq cperl-electric-parens t)
+        (setq cperl-continued-statement-offset tab-width)
+        (setq cperl-indent-level tab-width))     
