@@ -7,17 +7,15 @@
 
 ;; visual preferences
 (menu-bar-mode -1)
-(display-time-mode)
 (display-battery-mode 1)
 (blink-cursor-mode -1)
 (setq visible-bell t)
 
-(when (display-graphic-p)
-  (tool-bar-mode -1)
-  (scroll-bar-mode -1))
-
-(unless (display-graphic-p)
-  (setq display-time-day-and-date t))
+(cond ((display-graphic-p)
+       (tool-bar-mode -1)
+       (scroll-bar-mode -1))
+      (t (display-time-mode)
+	 (setq display-time-day-and-date t)))
 
 ;; font
 (add-to-list
