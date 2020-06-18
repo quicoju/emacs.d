@@ -11,11 +11,13 @@
 (blink-cursor-mode -1)
 (setq visible-bell t)
 
-(cond ((display-graphic-p)
-       (tool-bar-mode -1)
-       (scroll-bar-mode -1))
-      (t (display-time-mode)
-	 (setq display-time-day-and-date t)))
+(cond
+ ((display-graphic-p)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1))
+ (t
+  (display-time-mode)
+  (setq display-time-day-and-date t)))
 
 ;; font
 (add-to-list
