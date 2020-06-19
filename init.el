@@ -81,8 +81,9 @@
 ;; local definition files
 ;; ======================
 ;; extend load-path
-(add-to-list 'load-path
-	     (concat user-emacs-directory "lisp"))
+(add-to-list
+ 'load-path
+ (concat user-emacs-directory "lisp"))
 (load "gtd.el")
 (load "publish.el")
 (load "programming.el")
@@ -95,7 +96,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (win-switch fill-column-indicator winring doom-themes doom-modeline rust-mode rust-playground helm use-package))))
+    (magit win-switch fill-column-indicator winring doom-themes doom-modeline rust-mode rust-playground helm use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

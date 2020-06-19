@@ -1,19 +1,18 @@
 ;; 2018-08-21 -  Miscellaneous setting for programming
 ;;
-(use-package flymake-diagnostic-at-point
-  :after flymake
-  :config
-  (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode))
+(use-package hl-line
+  :config (set-face-background hl-line-face "gray13"))
 
 (use-package prog-mode
-  :requires (flymake)
-  :init (setq-default indent-tabs-mode nil)
-        (setq-default tab-width 4)
-        (setq-default fill-column 80)
-        (linum-mode)
-        (flymake-mode)
-        (hl-line-mode)
-        (column-number-mode))
+  :hook (prog-mode .
+         (lambda ()
+           (setq-default indent-tabs-mode nil)
+           (setq-default tab-width 4)
+           (setq-default fill-column 80)
+           (linum-mode)
+           (flymake-mode)
+           (hl-line-mode)
+           (column-number-mode))))
 
 ;; Perl
 ;; ====
@@ -29,3 +28,6 @@
         (setq cperl-electric-parens t)
         (setq cperl-continued-statement-offset tab-width)
         (setq cperl-indent-level tab-width))     
+
+(use-package magit
+  :ensure t)
