@@ -55,19 +55,6 @@
   :ensure t
   :config (winring-initialize))
 
-(use-package doom-themes
-  :if window-system
-  :ensure t
-  :config (setq doom-themes-enable-bold t
-                doom-themes-enable-italic t)
-          (load-theme 'doom-one t))
-
-(when window-system
-  (use-package doom-modeline
-    :requires (doom-themes)
-    :config (doom-modeline-mode 1)
-    :ensure t))
-
 (use-package helm
   :ensure t
   :config (helm-mode 1)
@@ -78,6 +65,17 @@
          ([remap find-file]       . 'helm-find-files)
          ([remap yank-pop]        . 'helm-show-kill-ring)
          ([remap occur]           . 'helm-occur)))
+
+(when window-system
+  (use-package doom-themes
+    :ensure t
+    :config (setq doom-themes-enable-bold t
+                  doom-themes-enable-italic t)
+            (load-theme 'doom-one t))
+  (use-package doom-modeline
+    :requires (doom-themes)
+    :config (doom-modeline-mode 1)
+    :ensure t))
 
 ;; local definition files
 ;; ======================
