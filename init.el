@@ -62,14 +62,12 @@
                 doom-themes-enable-italic t)
           (load-theme 'doom-one t))
 
-(use-package doom-modeline
-  :if window-system
-  :requires (doom-themes)
-  :config (doom-modeline-mode 1)
-  :ensure t)
+(when window-system
+  (use-package doom-modeline
+    :requires (doom-themes)
+    :config (doom-modeline-mode 1)
+    :ensure t))
 
-;; helm utilities
-;; ==============
 (use-package helm
   :ensure t
   :config (helm-mode 1)
