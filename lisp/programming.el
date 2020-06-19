@@ -1,5 +1,3 @@
-;; 2018-08-21 -  Miscellaneous setting for programming
-;;
 (use-package hl-line
   :config (set-face-background hl-line-face "gray13"))
 

@@ -36,11 +36,13 @@
 
 ;; core packages
 ;; =============
+;; TODO: Add a use-package block
 (add-hook 'org-mode-hook
       (lambda ()
         (progn (org-bullets-mode 't))))
 
-(setq ediff-window-setup-function 'ediff-setup-windows-plain) ; for i3
+;; ediif to work nicely with i3
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq ediff-split-window-function 'split-window-horizontally)
 
 ;; non-core packages
@@ -61,6 +63,7 @@
           (load-theme 'doom-one t))
 
 (use-package doom-modeline
+  :if window-system
   :requires (doom-themes)
   :config (doom-modeline-mode 1)
   :ensure t)
