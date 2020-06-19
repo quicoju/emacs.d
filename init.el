@@ -90,7 +90,6 @@
 (load "gtd.el")
 (load "publish.el")
 (load "programming.el")
-(load "web.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
