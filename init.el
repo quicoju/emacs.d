@@ -2,7 +2,7 @@
 (require 'package)
 (add-to-list
  'package-archives
- '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+ '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
 ;; visual preferences
@@ -22,7 +22,7 @@
 ;; font
 (add-to-list
  'default-frame-alist
- '(font . "DejaVu Sans Mono-8"))
+ '(font . "Source Code Pro-8"))
 
 ;; Set autosaves folder
 (setq temporary-file-directory
@@ -94,7 +94,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (magit win-switch fill-column-indicator winring doom-themes doom-modeline rust-mode rust-playground helm use-package))))
+    (vterm ob-rust racket-mode rainbow-delimiters magit win-switch fill-column-indicator winring doom-themes doom-modeline rust-mode rust-playground helm use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
