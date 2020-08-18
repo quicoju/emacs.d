@@ -34,6 +34,10 @@
 (desktop-save-mode 1)
 (server-start)
 
+;; preferences
+;; ===========
+(setq next-line-add-newlines t)
+
 ;; core packages
 ;; =============
 ;; TODO: Add a use-package block
