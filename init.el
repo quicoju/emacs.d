@@ -22,7 +22,7 @@
 ;; font
 (add-to-list
  'default-frame-alist
- '(font . "Source Code Pro-8"))
+ '(font . "Source Code Pro-10"))
 
 ;; Set autosaves folder
 (setq temporary-file-directory
@@ -45,6 +45,13 @@
       (lambda ()
         (progn (org-bullets-mode 't))))
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((perl    . t)
+   (python  . t)
+   (rust    . t)
+   (gnuplot . t)
+   (emacs-lisp . t)))
 ;; ediif to work nicely with i3
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq ediff-split-window-function 'split-window-horizontally)
@@ -98,7 +105,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (vterm ob-rust racket-mode rainbow-delimiters magit win-switch fill-column-indicator winring doom-themes doom-modeline rust-mode rust-playground helm use-package))))
+    (gnuplot gnuplot-mode vterm ob-rust racket-mode rainbow-delimiters magit win-switch fill-column-indicator winring doom-themes doom-modeline rust-mode rust-playground helm use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
