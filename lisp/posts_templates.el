@@ -28,9 +28,4 @@
          "<img src=\"./img/org-mode.png\" style=\"width:42px;height:42px;border:0;\"</a>\n"
          "#+LATEX_HEADER:\n\n"
          "#+BEGIN_navigator"
-         "#+END_navigator"
-         "** Comments"
-         "#+BEGIN_EXPORT html"
-         "<div id=\"commento\"></div>"
-         "<script src=\"https://cdn.commento.io/js/commento.js\"></script>"
-         "#+END_EXPORT")))
+         "#+END_navigator")))

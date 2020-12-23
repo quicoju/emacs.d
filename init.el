@@ -52,6 +52,7 @@
    (rust    . t)
    (gnuplot . t)
    (emacs-lisp . t)))
+
 ;; ediif to work nicely with i3
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq ediff-split-window-function 'split-window-horizontally)
