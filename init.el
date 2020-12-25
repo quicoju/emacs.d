@@ -22,7 +22,7 @@
 ;; font
 (add-to-list
  'default-frame-alist
- '(font . "Source Code Pro-10"))
+ '(font . "Source Code Pro-8"))
 
 ;; Set autosaves folder
 (setq temporary-file-directory
@@ -105,8 +105,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (gnuplot gnuplot-mode vterm ob-rust racket-mode rainbow-delimiters magit win-switch fill-column-indicator winring doom-themes doom-modeline rust-mode rust-playground helm use-package))))
+   '(org-bullets htmlize vterm ob-rust racket-mode rainbow-delimiters magit win-switch fill-column-indicator winring doom-themes doom-modeline rust-mode rust-playground helm use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
