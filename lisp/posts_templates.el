@@ -11,7 +11,7 @@
          "#+KEYWORDS:\n\n"
          "#+OPTIONS: toc:nil num:nil ^:nil pri:t date:nil creator:t timestamp:nil\n"
          "#+OPTIONS: html-link-use-abs-url:nil html-postamble:auto\n"
-         "#+OPTIONS: html-preamble:t html-scripts:t html-style:nil\n"
+         "#+OPTIONS: html-preamble:t html-scripts:t\n"
          "#+OPTIONS: html5-fancy:t tex:t\n\n"
          "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"css/my.css\"/>\n"
          "#+HTML_HEAD: <script type=\"text/javascript\" src=\"js/my.js\"></script>\n"
